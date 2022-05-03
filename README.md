@@ -6,7 +6,7 @@ Note - this setup does not currently work!
 1. Clone the repository to your Discovery home directory:
 ```bash
 cd $HOME
-git clone
+git clone git@github.com:marianalevineu/openseesmp-discovery.git
 cd openseesmp-discovery
 ```
 2. Modify the environment script `setenv_opensees.sh` line 15 if you need to change the root directory of the installation. By default it will be installed in `$HOME/openseesmp-discovery`.
