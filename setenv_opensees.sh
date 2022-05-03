@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#====================================================================================
+#title           :setenv_opensees.sh
+#description     :This script will source the runtime shell environment for OpenSees Parallel version MP.
+#author          :Mariana Levi
+#date            :Feb 2022
+#version         :0.3 
+#usage           :source setenv_opensees.sh 
+#notes           :Install OpenSees and dependencies first with install_opensees.sh. Loads environment of Intel 2019 compilers, MKL and MPICH libraries. 
+#bash_version    :4.2.46(2)-release (x86_64-redhat-linux-gnu)
+#====================================================================================
+
 ## User defined path - all libraries will be installed inside:
 export SOFTWARE_DIR=$HOME/opensees
 
