@@ -1,6 +1,7 @@
 # openseesmp-discovery
 These files were used to install OpenSees MP on the Northeastern University Discovery cluster.
-Note - this setup does not currently work!
+
+**Note - this setup does not currently work for v. 3.4.0!**
 
 ## Steps to install and run OpenSeesMP on Discovery:
 1. Clone the repository to your Discovery home directory:
