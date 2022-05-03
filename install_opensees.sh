@@ -8,6 +8,17 @@
 #SBATCH --output=install_OpenSees.out
 #SBATCH --error=install_OpenSees.err
 
+#====================================================================================
+#title           :install_opensees.sh
+#description     :This script will install the parallel (MP) OpenSees 3.4.0 with dependencies.
+#author          :Mariana Levi
+#date            :May 2022
+#version         :0.4    
+#usage           :sbatch install_opensees.sh
+#notes           :Installs OpenSeesMP 3.4.0 and dependencies using Intel compilers, MKL and MPICH.
+#bash_version    :4.2.46(2)-release (x86_64-redhat-linux-gnu)
+#====================================================================================
+
 ## User defined path - all libraries will be installed inside:
 source setenv_opensees.sh
 
@@ -72,7 +83,11 @@ make -j10
 export MUMPSDIR=$SOFTWARE_DIR/src/MUMPS_5.0.2
 
 # 4. install OPENSEES:
-cd $SOFTWARE_DIR/OpenSees
+cd $SOFTWARE_DIR
+wget https://github.com/OpenSees/OpenSees/archive/refs/tags/v3.4.0.tar.gz
+tar -zxvf v3.4.0.tar.gz
+mv OpenSees-3.4.0 OpenSees
+cd OpenSees
 mkdir -p bin lib
 cp $SOFTWARE_DIR/Makefile_OPENSEES.def Makefile.def
 make wipeall
