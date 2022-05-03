@@ -8,6 +8,6 @@
 #SBATCH --partition=short
 #SBATCH --constraint=cascadelake ##use only new nodes, with IB network support
 
-source $HOME/opensees/setenv_opensees.sh
+source $HOME/openseesmp-discovery/setenv_opensees.sh
 
 mpirun -n 2 OpenSeesMP example4.tcl 

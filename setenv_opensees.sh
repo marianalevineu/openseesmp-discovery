@@ -12,7 +12,7 @@
 #====================================================================================
 
 ## User defined path - all libraries will be installed inside:
-export SOFTWARE_DIR=$HOME/opensees
+export SOFTWARE_DIR=$HOME/openseesmp-discovery
 
 module load intel/2019-4
 module load mpich/3.3.2-intel
